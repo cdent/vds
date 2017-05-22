@@ -1,0 +1,20 @@
+[[local|localrc]]
+ADMIN_PASSWORD=secret
+DATABASE_PASSWORD=$ADMIN_PASSWORD
+RABBIT_PASSWORD=$ADMIN_PASSWORD
+SERVICE_PASSWORD=$ADMIN_PASSWORD
+FLOATING_RANGE=192.168.200.0/24
+HOST_IP=192.168.100.10
+
+USE_SYSTEMD=True
+LOGFILE=$DEST/logs/stack.sh.log
+# I am old
+LOG_COLOR=False
+
+
+disable_service c-sch
+disable_service c-api
+disable_service c-vol 
+disable_service horizon
+disable_service tempest
+disable_service dstat
